@@ -1,0 +1,47 @@
+{
+    "name": "Notion Bookmarks",
+    "version": "0.0.1",
+    "description": "A simple extension to bookmark pages in Notion",
+    "author": "Townsend Wu",
+    "manifest_version": 3,
+    "icons": {
+        "16": "images/16.png",
+        "32": "images/32.png",
+        "48": "images/48.png",
+        "128": "images/128.png"
+    },
+    "action": {
+        "default_title": "Notion Bookmarks",
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "images/16.png",
+            "32": "images/32.png",
+            "48": "images/48.png",
+            "128": "images/128.png"
+        }
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "scripts/content.js"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ]
+}
