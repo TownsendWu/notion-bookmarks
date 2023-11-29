@@ -43,5 +43,16 @@
         "storage",
         "activeTab",
         "scripting"
-    ]
+    ],
+    "commands": {
+        "save-page": {
+            "suggested_key": {
+                "default": "Alt+S",
+                "windows": "Alt+S",
+                "mac": "Command+Shift+U",
+                "linux": "Alt+S"
+            },
+            "description": "save current page to notion"
+        }
+    }
 }
